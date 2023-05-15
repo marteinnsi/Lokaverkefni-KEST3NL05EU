@@ -9,6 +9,6 @@ while IFS=',' read -r name firstName lastName username email department employee
     # set comment with email address
     usermod -c "$email" "$username"
     # he logs in with pwd 1234, then he must change pwds
-    echo "$username:1234" | chpasswd
+    echo "$username:changeme123" | chpasswd
     passwd --expire "$username"
 done
